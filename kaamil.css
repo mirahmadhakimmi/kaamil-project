@@ -1,0 +1,58 @@
+.sent{
+    text-align: right;
+    background: blue;
+    color: white;
+}
+li{
+    background: lightgreen;
+    list-style: none;
+    padding: 0.5em;
+    position: relative;
+}
+ul{
+    padding-left: 0;
+}
+li.last{
+    margin-bottom: 1em;
+}
+.from{
+    font-weight: bold;
+    display: none;
+}
+.first>.from{
+    display: block;
+}
+.first::before{
+    display: block;
+    content: "";
+    border-bottom: 0.5em solid transparent;
+    border-left: 0.5em solid blue;
+    position: absolute;
+    right: -0.4em;
+    top: 0px;
+}
+.received::before{
+    border-left:none;
+    border-right: 0.5em solid lightgrey;
+    left: -0.4em;
+    right: unset;
+}
+h1::before{
+    content: "⏩";
+    font-weight: 900;
+    font-size: 1.1em;
+    opacity: 0.5;
+}
+h1{
+    font-weight: normal;
+}
+
+.channel{
+    font-size: 22px;
+    text-align:left;
+    font-weight: bold;
+}
+.channel, .h1{
+    font-weight: bolder;
+    font-size: 28px;
+}
